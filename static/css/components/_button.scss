@@ -1,0 +1,17 @@
+.login-btn {
+  display: inline-block;
+  padding: $spacing-small $spacing-medium;
+  font-size: 1em;
+  color: #000;
+  background-color: $spotify-green;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #1ed760;
+    color: #000;
+  }
+}

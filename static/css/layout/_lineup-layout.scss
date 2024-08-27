@@ -1,0 +1,55 @@
+.festival-lineup {
+  padding: $spacing-large;
+  @include flex-center(column);
+  gap: $spacing-large;
+}
+
+.festival-day {
+  @include flex-center(column);
+  width: 100%;
+  text-align: center;
+  padding: $spacing-large 0;
+
+  h2 {
+    @include responsive-font(2em, 2.5em);
+    color: $color-accent;
+    margin-bottom: $spacing-medium;
+  }
+
+  .headliner, .mid-tier, .lower-tier {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-medium;
+  }
+
+  .artist-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: $spacing-medium;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    &.headliner {
+      font-size: 2em;
+      font-weight: bold;
+      color: $color-primary;
+    }
+
+    &.mid-tier {
+      font-size: 1.5em;
+      color: $color-secondary;
+    }
+
+    &.lower-tier {
+      font-size: 1.2em;
+      color: $color-text;
+      opacity: 0.8;
+    }
+  }
+}

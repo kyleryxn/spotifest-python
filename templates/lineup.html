@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Spotifest</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.min.css') }}">
+</head>
+<body>
+    <header class="festival-header">
+        <h1>{{ user_name }}'s Music Festival Lineup</h1>
+        <p class="festival-dates">Friday, Saturday & Sunday</p>
+    </header>
+
+    <div class="festival-lineup">
+        <!-- Friday -->
+        <div class="festival-day">
+            <h2>Friday - {{ friday }}</h2>
+            <div class="headliner">
+                <div class="artist-card headliner">{{ artists[0] }}</div>
+            </div>
+            <div class="mid-tier">
+                {% for artist in artists[3:6] %}
+                    <div class="artist-card mid-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+            <div class="lower-tier">
+                {% for artist in artists[9:15] %}
+                    <div class="artist-card lower-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Saturday -->
+        <div class="festival-day">
+            <h2>Saturday - {{ saturday }}</h2>
+            <div class="headliner">
+                <div class="artist-card headliner">{{ artists[1] }}</div>
+            </div>
+            <div class="mid-tier">
+                {% for artist in artists[6:9] %}
+                    <div class="artist-card mid-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+            <div class="lower-tier">
+                {% for artist in artists[15:21] %}
+                    <div class="artist-card lower-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Sunday -->
+        <div class="festival-day">
+            <h2>Sunday - {{ sunday }}</h2>
+            <div class="headliner">
+                <div class="artist-card headliner">{{ artists[2] }}</div>
+            </div>
+            <div class="mid-tier">
+                {% for artist in artists[9:12] %}
+                    <div class="artist-card mid-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+            <div class="lower-tier">
+                {% for artist in artists[21:27] %}
+                    <div class="artist-card lower-tier">{{ artist }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <footer class="festival-footer">
+        <a class="logout-btn" href="{{ url_for('logout') }}">Logout</a>
+    </footer>
+</body>
+</html>

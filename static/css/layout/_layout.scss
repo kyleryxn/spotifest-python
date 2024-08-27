@@ -1,0 +1,26 @@
+body {
+    background-image: url('https://example.com/path-to-festival-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.lineup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout {
+    margin-top: 50px;
+}

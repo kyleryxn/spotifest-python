@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  margin-bottom: $spacing-medium;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: $spacing-small;
+  font-size: 1em;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

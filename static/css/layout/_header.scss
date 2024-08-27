@@ -1,0 +1,16 @@
+.festival-header {
+    @include flex-center(column);
+    padding: $spacing-large;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    h1 {
+        @include responsive-font(2em, 3em);
+        color: $color-primary;
+        margin-bottom: $spacing-small;
+    }
+
+    .festival-dates {
+        font-size: 1.2em;
+        color: $color-secondary;
+    }
+}
